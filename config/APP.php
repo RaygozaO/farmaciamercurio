@@ -1,0 +1,5 @@
+<?php 
+    const SERVERURL="http://farmaciamercurio.mx/";
+    const COMPANY="Farmacia Mercurio";
+    const MONEDA="$";
+    date_default_timezone_set('America/Mexico_City');
