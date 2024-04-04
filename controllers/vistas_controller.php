@@ -15,6 +15,5 @@
                 $respuesta="login";
             }
             return $respuesta;
-            
         }
     }

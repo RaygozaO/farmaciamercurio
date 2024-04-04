@@ -29,12 +29,14 @@
 	--color-one: #F5F5F5;
 	--color-two: #24292E;
 	--color-three: #EC5252;
-	/*--color-three: #0366D6;*/
+	--color-four: #93bd9a;
+	--color-five: #4caf50;
+	--color-six: #BAC9A9;
+
 
 	--form-color: #14111A;
 
-	--accent-color: #253556;
-	/*--accent-color: #455A64;*/
+	--accent-color: #5D4157;
     --border-color: #D8D8D8;
 }
 
@@ -59,6 +61,10 @@ body,html{
 	background-color: #FFF;
 	padding: 15px;
 	border-radius: 3px;
+}
+/*-------Colores -------*/
+.verde{
+	color: var(--color-five);
 }
 
 /*----------  Page headers styles  ----------*/
@@ -99,7 +105,7 @@ body,html{
 	border-bottom: 2px solid transparent;
 }
 .page-nav-tabs li a.active{
-	color: var(--color-three);
+	color: var(--color-five);
 	cursor: none;
 	pointer-events: none;
 }
@@ -119,6 +125,7 @@ body,html{
 	box-shadow: none;
 	border: none;
 }
+
 .form-control-file:active,
 .form-control-file:focus{
 	outline: none;
@@ -176,7 +183,7 @@ table form{
 /*----------  Page 404 styles  ----------*/
 .container-404{
 	background: #000428;
-	background: linear-gradient(to right, #004e92, #000428);
+	background: linear-gradient(to right, var(--color-four), var(--color-five));
 	color: #fff;
 	height: 100%;
 	display: flex;
@@ -191,8 +198,8 @@ table form{
 	justify-content: center;
 	align-items: center;
 	background: #0575E6;
-	background: -webkit-linear-gradient(to right, #021B79, #0575E6);
-	background: linear-gradient(to right, #021B79, #0575E6);
+	background: -webkit-linear-gradient(to right, var(--color-four), var(--color-five));
+	background: linear-gradient(to right, var(--color-four), var(--color-five));
 
 }
 .login-content{
@@ -218,8 +225,8 @@ table form{
 	transition: all .2s ease-out;
 }
 .btn-login:hover{
-	background-color: var(--color-three);
-	border: 1px solid var(--color-three);
+	background-color: var(--color-four);
+	border: 1px solid var(--color-four);
 	text-decoration: none;
 	color: #fff;
 }
@@ -255,9 +262,9 @@ table form{
 	left: 0;
 	z-index: 1;
 	transition: all .2s ease-in-out;
-	background-image: url('../assets/img/nav-font.jpg');
+	background-image: url('../assets/img/fondoLoto.jpg');
 	background-position: center center;
-	background-size: cover;
+	background-size: contain;
 }
 .nav-lateral-bg{ display: none; }
 .nav-lateral-content{
@@ -267,7 +274,7 @@ table form{
 }
 .nav-lateral-bar{
 	height: 3px;
-	background-color: var(--color-three);
+	background-color: var(--color-four);
 }
 .nav-lateral-avatar{
 	padding: 40px 0;
@@ -312,7 +319,7 @@ table form{
 }
 .nav-lateral-menu ul li a.active{
 	color: #FFF;
-	background-color: var(--color-three);
+	background-color: var(--color-four);
 }
 .nav-lateral-menu ul li a:hover{
 	color: #fff;
@@ -320,7 +327,7 @@ table form{
 }
 .nav-lateral-menu ul li ul{
 	display: none;
-	border: 1px solid var(--color-three);
+	border: 1px solid var(--color-four);
 	background: rgba(20, 30, 48, .5);
 }
 .nav-lateral-menu ul li ul a{
@@ -348,8 +355,8 @@ table form{
 
 .navbar-info a{
 	color: var(--accent-color);
-	height: 50px;
-	min-width: 40px;
+	height: 60px;
+	min-width: 60px;
 	text-align: center;
 	line-height: 50px;
 	display: inline-block;
@@ -357,7 +364,7 @@ table form{
 	user-select: none;
 }
 .navbar-info a:hover{
-	color: var(--color-three);
+	color: var(--color-four);
 	background-image: radial-gradient(circle,rgba(250, 30, 78, .1), transparent 80%);
 }
 .navbar-info a:active,
@@ -385,7 +392,7 @@ table form{
 }
 .tile:hover{
 	text-decoration: none;
-	border-color: var(--color-three);
+	border-color: var(--color-four);
 }
 .tile:focus,
 .tile:active{
@@ -405,8 +412,8 @@ table form{
 }
 .tile:hover .tile-tittle{
 	color: #FFF;
-	border-color: var(--color-three);
-	background-color: var(--color-three);
+	border-color: var(--color-four);
+	background-color: var(--color-four);
 }
 .tile-icon{
 	width: 100%;
@@ -424,7 +431,7 @@ table form{
 }
 .tile:hover .tile-icon > i,
 .tile:hover .tile-icon > p{
-	color: var(--color-three);
+	color: var(--color-four);
 }
 
 
