@@ -1,8 +1,8 @@
 <?php
     const SERVER="localhost";
-    const DB="mercuriodb";
+    const DB="mercurio";
     const USER="root";
-    const PASS="";
+    const PASS="Oscar*780917";
 
     const SGBD="mysql:host=".SERVER.";dbname=".DB;
 
