@@ -10,7 +10,7 @@
 
     <!-- Content -->
     <div class="full-box tile-container">
-        <a href="<?php echo SERVERURL; ?>client-list/" class="tile">
+        <a href="client-list/" class="tile">
             <div class="tile-tittle">Pacientes</div>
             <div class="tile-icon">
                 <i class="fas fa-users fa-fw"></i>
@@ -18,7 +18,7 @@
             </div>
         </a>
 
-        <a href="<?php echo SERVERURL; ?>product-list/" class="tile">
+        <a href="product-list/" class="tile">
             <div class="tile-tittle">Productos</div>
             <div class="tile-icon">
                 <i class="fas fa-barcode fa-fw"></i>
@@ -26,7 +26,7 @@
             </div>
         </a>
 
-        <a href="<?php echo SERVERURL; ?>reservation-approved/" class="tile">
+        <a href="reservation-approved/" class="tile">
             <div class="tile-tittle">Citas Medicas</div>
             <div class="tile-icon">
                 <i class="far fa-calendar-alt fa-fw"></i>
@@ -34,7 +34,7 @@
             </div>
         </a>
 
-        <a href="<?php echo SERVERURL; ?>reservation-status/" class="tile">
+        <a href="reservation-status/" class="tile">
             <div class="tile-tittle">Ventas</div>
             <div class="tile-icon">
                 <i class="fas fa-hand-holding-usd fa-fw"></i>
@@ -42,7 +42,7 @@
             </div>
         </a>
 
-        <a href="<?php echo SERVERURL; ?>reservation-list/" class="tile">
+        <a href="stock-list/" class="tile">
             <div class="tile-tittle">Stock</div>
             <div class="tile-icon">
                 <i class="fas fa-clipboard-list fa-fw"></i>
@@ -50,7 +50,7 @@
             </div>
         </a>
 
-        <a href="<?php echo SERVERURL; ?>user-list/" class="tile">
+        <a href="user-list/" class="tile">
             <div class="tile-tittle">Usuarios</div>
             <div class="tile-icon">
                 <i class="fas fa-user-circle fa-fw"></i>
@@ -58,42 +58,42 @@
             </div>
         </a>
 
-        <a href="<?php echo SERVERURL; ?>company/" class="tile">
+        <a href="company/" class="tile">
             <div class="tile-tittle">Punto de Venta</div>
             <div class="tile-icon">
                 <i class="fas fa-store-alt fa-fw"></i>
                 <p>1 Registrada</p>
             </div>
         </a>
-        <a href="<?php echo SERVERURL; ?>reports/" class="tile">
+        <a href="reports/" class="tile">
             <div class="tile-tittle">Informes Adm.</div>
             <div class="tile-icon">
                 <i class="fas fa-chart-line fa-fw"></i>
                 <p>10 Registrados</p>
             </div>
         </a>
-        <a href="<?php echo SERVERURL; ?>reports/" class="tile">
+        <a href="reports/" class="tile">
             <div class="tile-tittle">Archivo Clinico</div>
             <div class="tile-icon">
                 <i class="fas fa-id-card-alt fa-fw"></i>
                 <p>10 Registrados</p>
             </div>
         </a>
-        <a href="<?php echo SERVERURL; ?>reports/" class="tile">
+        <a href="reports/" class="tile">
             <div class="tile-tittle">Recetas Medicas</div>
             <div class="tile-icon">
                 <i class="fas fa-id-card fa-fw"></i>
                 <p>10 Registrados</p>
             </div>
         </a>
-        <a href="<?php echo SERVERURL; ?>reports/" class="tile">
+        <a href="reports/" class="tile">
             <div class="tile-tittle">Enlace Médico</div>
             <div class="tile-icon">
                 <i class="fas fa-american-sign-language-interpreting fa-fw"></i>
                 <p>10 Registrados</p>
             </div>
         </a>
-        <a href="<?php echo SERVERURL; ?>reports/" class="tile">
+        <a href="reports/" class="tile">
             <div class="tile-tittle">Compras</div>
             <div class="tile-icon">
                 <i class="fas fa-pallet fa-fw"></i>
