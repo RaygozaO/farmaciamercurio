@@ -6,7 +6,8 @@
                         "client-update","company","product-list","product-new","product-search",
                     "product-update","reports","reservation-approved","reservation-list",
                     "reservation-new","reservation-new","reservation-search","reservation-status",
-                    "reservation-update","user-list","user-new","user-search","user-update","stock-list"];
+                    "reservation-update","user-list","user-new","user-search","user-update","stock-list",
+                "stock-update"];
             if(in_array($vistas, $white_list)){
                 if(is_file("./views/contents/".$vistas."-view.php")){
                     $content="./views/contents/".$vistas."-view.php";
