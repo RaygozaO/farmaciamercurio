@@ -1,28 +1,25 @@
 <div class="full-box page-header">
     <h3 class="text-left">
-        <i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR PRÉSTAMOS POR FECHA
+        <i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR CITAS POR FECHA
     </h3>
-    <p class="text-justify">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia fugiat est ducimus inventore, repellendus deserunt cum aliquam dignissimos, consequuntur molestiae perferendis quae, impedit doloribus harum necessitatibus magnam voluptatem voluptatum alias!
-    </p>
 </div>
 
 <div class="container-fluid">
     <ul class="full-box list-unstyled page-nav-tabs">
         <li>
-            <a href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO PRÉSTAMO</a>
+            <a href="<?php echo SERVERURL; ?>reservation-new"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO CITA MÉDICA</a>
         </li>
         <li>
-            <a href="reservation-reservation.html"><i class="far fa-calendar-alt"></i> &nbsp; RESERVACIONES</a>
+            <a href="<?php echo SERVERURL; ?>reservation-status"><i class="far fa-calendar-alt"></i> &nbsp; STATUS</a>
         </li>
         <li>
-            <a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; PRÉSTAMOS</a>
+            <a href="<?php echo SERVERURL; ?>reservation-approved"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; APROBADAS</a>
         </li>
         <li>
-            <a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; FINALIZADOS</a>
+            <a class="active" href="<?php echo SERVERURL; ?>reservation-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE RESERVACIONES</a>
         </li>
         <li>
-            <a class="active" href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR POR FECHA</a>
+            <a href="<?php echo SERVERURL; ?>reservation-search"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR RESERVACIÓN</a>
         </li>
     </ul>
 </div>
@@ -82,7 +79,7 @@
             <tr class="text-center roboto-medium">
                 <th>#</th>
                 <th>CLIENTE</th>
-                <th>FECHA DE PRÉSTAMO</th>
+                <th>FECHA DE CITA</th>
                 <th>FECHA DE ENTREGA</th>
                 <th>TIPO</th>
                 <th>ESTADO</th>

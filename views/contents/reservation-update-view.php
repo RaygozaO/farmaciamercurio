@@ -10,19 +10,19 @@
 <div class="container-fluid">
     <ul class="full-box list-unstyled page-nav-tabs">
         <li>
-            <a href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO PRÉSTAMO</a>
+            <a href="<?php echo SERVERURL; ?>reservation-new"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO CITA MÉDICA</a>
         </li>
         <li>
-            <a href="reservation-reservation.html"><i class="far fa-calendar-alt"></i> &nbsp; RESERVACIONES</a>
+            <a href="<?php echo SERVERURL; ?>reservation-status"><i class="far fa-calendar-alt"></i> &nbsp; STATUS</a>
         </li>
         <li>
-            <a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; PRÉSTAMOS</a>
+            <a href="<?php echo SERVERURL; ?>reservation-approved"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; APROBADAS</a>
         </li>
         <li>
-            <a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; FINALIZADOS</a>
+            <a class="active" href="<?php echo SERVERURL; ?>reservation-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE RESERVACIONES</a>
         </li>
         <li>
-            <a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR POR FECHA</a>
+            <a href="<?php echo SERVERURL; ?>reservation-search"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR RESERVACIÓN</a>
         </li>
     </ul>
 </div>
@@ -31,8 +31,8 @@
 
     <div class="container-fluid form-neon">
         <div class="container-fluid">
-            <p class="text-center roboto-medium">AGREGAR NUEVO PAGO A ESTE PRÉSTAMO</p>
-            <p class="text-center">Este préstamo presenta un pago pendiente por la cantidad de <strong>$50</strong>, puede agregar un pago a este préstamo haciendo clic en el siguiente botón.</p>
+            <p class="text-center roboto-medium">AGREGAR NUEVO PAGO CITA</p>
+            <p class="text-center">Esta cita presenta adeudo por <strong>$50</strong>, puede agregar un pago en siguiente botón.</p>
             <p class="text-center">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalPago"><i class="far fa-money-bill-alt"></i> &nbsp; Agregar pago</button>
             </p>
@@ -40,7 +40,7 @@
         <div class="container-fluid">
             <div>
                 <span class="roboto-medium">CLIENTE:</span>
-                &nbsp; Carlos Alfaro
+                &nbsp; Oscar Raygoza
             </div>
             <div class="table-responsive">
                 <table class="table table-dark table-sm">
@@ -81,18 +81,18 @@
         </div>
         <form action="" autocomplete="off">
             <fieldset>
-                <legend><i class="far fa-clock"></i> &nbsp; Fecha y hora de préstamo</legend>
+                <legend><i class="far fa-clock"></i> &nbsp; Fecha y hora de cita</legend>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="form-group">
-                                <label for="prestamo_fecha_inicio">Fecha de préstamo</label>
+                                <label for="prestamo_fecha_inicio">Fecha de cita</label>
                                 <input type="date" class="form-control" readonly="" id="prestamo_fecha_inicio">
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="form-group">
-                                <label for="prestamo_hora_inicio">Hora de préstamo</label>
+                                <label for="prestamo_hora_inicio">Hora de cita</label>
                                 <input type="text" class="form-control" readonly="" id="prestamo_hora_inicio">
                             </div>
                         </div>

@@ -10,19 +10,19 @@
 <div class="container-fluid">
     <ul class="full-box list-unstyled page-nav-tabs">
         <li>
-            <a class="active" href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO PRÉSTAMO</a>
+            <a href="<?php echo SERVERURL; ?>reservation-new"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO CITA MÉDICA</a>
         </li>
         <li>
-            <a href="reservation-reservation.html"><i class="far fa-calendar-alt"></i> &nbsp; RESERVACIONES</a>
+            <a href="<?php echo SERVERURL; ?>reservation-status"><i class="far fa-calendar-alt"></i> &nbsp; STATUS</a>
         </li>
         <li>
-            <a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; PRÉSTAMOS</a>
+            <a href="<?php echo SERVERURL; ?>reservation-approved"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; APROBADAS</a>
         </li>
         <li>
-            <a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; FINALIZADOS</a>
+            <a class="active" href="<?php echo SERVERURL; ?>reservation-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE RESERVACIONES</a>
         </li>
         <li>
-            <a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR POR FECHA</a>
+            <a href="<?php echo SERVERURL; ?>reservation-search"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR RESERVACIÓN</a>
         </li>
     </ul>
 </div>
@@ -30,7 +30,7 @@
 <div class="container-fluid">
     <div class="container-fluid form-neon">
         <div class="container-fluid">
-            <p class="text-center roboto-medium">AGREGAR CLIENTE O ITEMS</p>
+            <p class="text-center roboto-medium">AGREGAR CLIENTE</p>
             <p class="text-center">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalCliente"><i class="fas fa-user-plus"></i> &nbsp; Agregar cliente</button>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalItem"><i class="fas fa-box-open"></i> &nbsp; Agregar item</button>
@@ -127,18 +127,18 @@
         </div>
         <form action="" autocomplete="off">
             <fieldset>
-                <legend><i class="far fa-clock"></i> &nbsp; Fecha y hora de préstamo</legend>
+                <legend><i class="far fa-clock"></i> &nbsp; Fecha y hora de la cita</legend>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="form-group">
-                                <label for="prestamo_fecha_inicio">Fecha de préstamo</label>
+                                <label for="prestamo_fecha_inicio">Fecha de cita</label>
                                 <input type="date" class="form-control" name="prestamo_fecha_inicio_reg" id="prestamo_fecha_inicio">
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="form-group">
-                                <label for="prestamo_hora_inicio">Hora de préstamo</label>
+                                <label for="prestamo_hora_inicio">Hora de la cita</label>
                                 <input type="time" class="form-control" name="prestamo_hora_inicio_reg" id="prestamo_hora_inicio">
                             </div>
                         </div>
@@ -146,18 +146,18 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend><i class="fas fa-history"></i> &nbsp; Fecha y hora de entrega</legend>
+                <legend><i class="fas fa-history"></i> &nbsp; Fecha y hora de ingreso</legend>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="form-group">
-                                <label for="prestamo_fecha_final">Fecha de entrega</label>
+                                <label for="prestamo_fecha_final">Fecha de confirmación</label>
                                 <input type="date" class="form-control" name="prestamo_fecha_final_reg" id="prestamo_fecha_final">
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="form-group">
-                                <label for="prestamo_hora_final">Hora de entrega</label>
+                                <label for="prestamo_hora_final">Hora de salida</label>
                                 <input type="time" class="form-control" name="prestamo_hora_final_reg" id="prestamo_hora_final">
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                                 <select class="form-control" name="prestamo_estado_reg" id="prestamo_estado">
                                     <option value="" selected="" disabled="">Seleccione una opción</option>
                                     <option value="Reservacion">Reservación</option>
-                                    <option value="Prestamo">Préstamo</option>
+                                    <option value="Prestamo">Cita</option>
                                     <option value="Finalizado">Finalizado</option>
                                 </select>
                             </div>

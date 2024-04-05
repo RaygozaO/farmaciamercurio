@@ -3,21 +3,18 @@
     <h3 class="text-left">
         <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE STOCK
     </h3>
-    <p class="text-justify">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum rerum animi natus beatae ex. Culpa blanditiis tempore amet alias placeat, obcaecati quaerat ullam, sunt est, odio aut veniam ratione.
-    </p>
 </div>
 
 <div class="container-fluid">
     <ul class="full-box list-unstyled page-nav-tabs">
         <li>
-            <a href="client-new-view.php"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR LISTADO</a>
+            <a href="<?php echo SERVERURL; ?>client-new-view"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR LISTADO</a>
         </li>
         <li>
-            <a class="active" href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; VER LISTADOS</a>
+            <a class="active" href="<?php echo SERVERURL; ?>client-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; VER LISTADOS</a>
         </li>
         <li>
-            <a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR LISTADOS</a>
+            <a href="<?php echo SERVERURL; ?>client-search"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR LISTADOS</a>
         </li>
     </ul>
 </div>
