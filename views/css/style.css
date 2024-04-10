@@ -433,7 +433,9 @@ table form{
 .tile:hover .tile-icon > p{
 	color: var(--color-four);
 }
-
+[class*=" bmd-label"], [class^=bmd-label] {
+    color: rgba(0, 0, 0, .5) !important;
+}
 
 /*----------  Breakpoints  ----------*/
 @media (max-width: 767px){

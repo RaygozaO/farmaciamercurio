@@ -6,3 +6,4 @@
 	<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     <script src="../views/js/sweetalert2.min.js" ></script>
 	<script src="../views/js/main.js" ></script>
+    <script src="../views/js/alerts.js" ></script>

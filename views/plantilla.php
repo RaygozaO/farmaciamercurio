@@ -5,11 +5,12 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title><?php echo COMPANY; ?> </title>
     <!-- Contenedor de Estilos -->
-    <?php include "/var/www/farmaciamercurio/views/include/links.php" ?>
+    <?php include "./views/include/links.php" ?>
 </head>
 <body>
 <?php
-		$peticionAjax =false; 
+		$peticionAjax =false;
+
 		require_once "./controllers/vistas_controller.php";
 		$IV = new  vistas_controller();
 		$result = $IV->get_views_controller();

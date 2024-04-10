@@ -1,33 +1,33 @@
 
 const formsAjax = document.querySelectorAll(".FormularioAjax");
 
-function enviarFormAjax(e){
-    e.preventDefault();
-    let data = new FormData(this);
-    let method = this.getAttribute("method");
-    let action = this.getAttribute("action");
-    let tipo = this.getAttribute("data-form");
 
-    let header = new Headers();
-    let config = {
+function enviarFormAjax(e) {
+    e.preventDefault();
+    const form = document.querySelector('form')
+    const data = new FormData(form);
+    const method = this.getAttribute("method");
+    const action = this.getAttribute("action");
+    const tipo = this.getAttribute("data-form");
+
+    const header = new Headers();
+    const config = {
         method: method,
         headers: header,
         mode: 'cors',
         cache: 'no-cache',
         body: data
+    };
+
+    let textAlert = "";
+    if (tipo === "guardar") {
+        textAlert = "Los datos se guardarán en el sistema";
+    } else if (tipo === "borrar") {
+        textAlert = "Los datos se eliminarán del sistema";
+    } else if (tipo === "actualizar") {
+        textAlert = "Los datos serán actualizados";
     }
-    let textAlert;
-    if(tipo==="guardar"){
-        textAlert="Los datos se guardarán en el sistema";
-    }else if(tipo==="borrar"){
-        textAlert="Los datos se eliminarán del sistema";
-    }else if(tipo==="actualizar"){
-        textAlert="Los datos serán actualizados";
-    }else if(tipo==="buscar"){
-        textAlert="Los datos serán actualizados";
-    }else if(tipo==="citas"){
-        textAlert="¿Desea borrar los datos de la cita?";
-    }
+
     Swal.fire({
         title: '¿Estás seguro?',
         text: textAlert,
@@ -36,14 +36,16 @@ function enviarFormAjax(e){
         cancelButtonColor: '#d33',
         showCancelButton: true,
         confirmButtonText: 'Aceptar',
-        cancelButtonText: 'Cancelar'
-    }).then((result)=>{
-        if (result.value){
-            fetch(action,config)
-                .then(respuesta => respuesta.json())
+        cancelButtonText: 'Cancelar',
+   }).then((result) => {
+        console.log(result);
+        if (result.value) {
+            fetch(action, config)
                 .then(respuesta => {
-                    return alertasAjax(respuesta);
-                });
+                    console.log(respuesta);
+                    return respuesta.json();
+                })
+                .then(alertasAjax);
         }
     });
 }
@@ -56,18 +58,21 @@ function alertasAjax(alerta){
     if(alerta.Alerta==="simple"){
         Swal.fire({
             title: alerta.Titulo,
-            type: alerta.Icono,
+            type: alerta.Tipo,
             text: alerta.Texto,
-            cancelButtonText: 'Aceptar',
-            footer: '<a href="#">Necesitas Ayuda?</a>'
+            confirmButtonColor: "#4caf50",
+            confirmButtonText: 'Aceptar'
         });
     }else if(alerta.Alerta==='recargar'){
         Swal.fire({
             title: alerta.Titulo,
             text: alerta.Texto,
-            type: alerta.Icono,
+            type: alerta.Tipo,
+            showCancelButton: true,
             confirmButtonColor: "#4caf50",
-            confirmButtonText: 'Aceptar'
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Aceptar',
+            cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.value) {
                 location.reload();
@@ -77,9 +82,12 @@ function alertasAjax(alerta){
         Swal.fire({
             title: alerta.Titulo,
             text: alerta.Texto,
-            type: alerta.Icono,
+            type: alerta.Tipo,
+            showCancelButton: true,
             confirmButtonColor: "#4caf50",
-            confirmButtonText: 'Aceptar'
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Aceptar',
+            cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.value) {
                 document.querySelector(".FormularioAjax").reset();
@@ -87,7 +95,6 @@ function alertasAjax(alerta){
         });
     }else if(alerta.Alerta==="redireccion"){
         window.location.href=alerta.URL;
-
     }
 
 }
