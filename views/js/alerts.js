@@ -4,8 +4,8 @@ const formsAjax = document.querySelectorAll(".FormularioAjax");
 
 function enviarFormAjax(e) {
     e.preventDefault();
-    const form = document.querySelector('form')
-    const data = new FormData(form);
+    //const form = document.querySelector('form')
+    const data = new FormData(this);
     const method = this.getAttribute("method");
     const action = this.getAttribute("action");
     const tipo = this.getAttribute("data-form");
@@ -40,14 +40,14 @@ function enviarFormAjax(e) {
    }).then((result) => {
         console.log(result);
         if (result.value) {
-            fetch(action, config)
-                .then(respuesta => {
-                    console.log(respuesta);
-                    return respuesta.json();
-                })
-                .then(alertasAjax);
+        fetch(action, config)
+            .then(respuesta=>respuesta.json())
+            .then(respuesta=>{
+                return alertasAjax(respuesta);
+            })
         }
     });
+        
 }
 
 formsAjax.forEach(forms =>{

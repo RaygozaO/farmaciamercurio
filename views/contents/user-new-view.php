@@ -96,7 +96,7 @@
                     <div class="col-12 col-md-4">
                         <div class="form-group">
                             <label for="calle" class="bmd-label-floating">Calle</label>
-                            <input type="text" pattern="[0-9a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,40}" class="form-control" name="calle" id="calle" maxlength="40">
+                            <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9 ]{1,40}" class="form-control" name="calle" id="calle" maxlength="40">
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
@@ -114,7 +114,7 @@
                     <div class="col-12 col-md-4">
                         <div class="form-group">
                             <label for="cp" class="bmd-label-floating">Codigo Postal</label>
-                            <input type="number" pattern="[0-9]{5-5}" class="form-control" name="cp" id="cp" maxlength="5">
+                            <input type="number" min="20000" pattern="\d{5}" class="form-control" name="cp" id="cp" minlength="5" maxlength="5">
                         </div>
                     </div>
                     <div class="col-12 col-md-4">

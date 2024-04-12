@@ -8,6 +8,7 @@ if($peticionAjax){
     class main_model{
         /*----------- funcion de conexion a BD ------------*/
         protected static function connDB(){
+            var_dump(self::connDB());
             $mbd = new PDO(SGBD,USER,PASS);
             $mbd->exec('SET CHARACTER SET utf8');
             return $mbd;
