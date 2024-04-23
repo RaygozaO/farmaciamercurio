@@ -8,11 +8,19 @@ if($peticionAjax){
     class main_model{
         /*----------- funcion de conexion a BD ------------*/
         protected static function connDB(){
-            var_dump(self::connDB());
-            $mbd = new PDO(SGBD,USER,PASS);
-            $mbd->exec('SET CHARACTER SET utf8');
+            try {
+                $mbd = new PDO(SGBD,USER,PASS);
+                /*$mbd->exec('SET CHARACTER SET utf8');
+                return $mbd;*/
+                $mbd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                //echo "conexion exitosa";
+            }catch (PDOException $e){
+                echo "Error de conexion".$e->getMessage();
+            }
+            var_dump($mbd);
             return $mbd;
         }
+
         /*------ consultas sin modelo----------------------*/
         protected static function consulta_simple($consulta){
             $sql=self::connDB()->prepare($consulta);
@@ -46,7 +54,7 @@ if($peticionAjax){
 
         /*--------------Evitar Injection--------------- */
         protected static function clean_chains($chain){
-            $chain=trim($chain);
+            //$chain=trim($chain);
             $chain=stripcslashes($chain);
             $chain=str_ireplace("<script>", "", $chain);
             $chain=str_ireplace("<script src","",$chain);
@@ -69,7 +77,7 @@ if($peticionAjax){
             $chain=str_ireplace("==","",$chain);
             $chain=str_ireplace(";","",$chain);
             $chain=str_ireplace("::","",$chain);
-            $chain=trim($chain);
+            //$chain=trim($chain);
             $chain=stripslashes($chain);
             return $chain;
         }

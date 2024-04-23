@@ -1,22 +1,20 @@
-
 const formsAjax = document.querySelectorAll(".FormularioAjax");
-
 
 function enviarFormAjax(e) {
     e.preventDefault();
-    //const form = document.querySelector('form')
-    const data = new FormData(this);
-    const method = this.getAttribute("method");
-    const action = this.getAttribute("action");
-    const tipo = this.getAttribute("data-form");
 
-    const header = new Headers();
-    const config = {
+    let formData = new FormData(this);
+
+
+    let method = this.getAttribute("method");
+    let action = this.getAttribute("action");
+    let tipo = this.getAttribute("data-form");
+
+    let config = {
         method: method,
-        headers: header,
         mode: 'cors',
         cache: 'no-cache',
-        body: data
+        body: formData
     };
 
     let textAlert = "";
@@ -37,25 +35,23 @@ function enviarFormAjax(e) {
         showCancelButton: true,
         confirmButtonText: 'Aceptar',
         cancelButtonText: 'Cancelar',
-   }).then((result) => {
-        console.log(result);
-        if (result.value) {
-        fetch(action, config)
-            .then(respuesta=>respuesta.json())
-            .then(respuesta=>{
-                return alertasAjax(respuesta);
-            })
+    }).then((result) => {
+        if(result.value){
+            fetch(action,config)
+                .then(respuesta => respuesta.json())
+                .then(respuesta => {
+                    return alertasAjax(respuesta);
+                });
         }
     });
-        
 }
 
-formsAjax.forEach(forms =>{
-    forms.addEventListener('submit',enviarFormAjax);
+formsAjax.forEach(form => {
+    form.addEventListener('submit', enviarFormAjax);
 });
 
-function alertasAjax(alerta){
-    if(alerta.Alerta==="simple"){
+function alertasAjax(alerta) {
+    if (alerta.Alerta === "simple") {
         Swal.fire({
             title: alerta.Titulo,
             type: alerta.Tipo,
@@ -63,7 +59,7 @@ function alertasAjax(alerta){
             confirmButtonColor: "#4caf50",
             confirmButtonText: 'Aceptar'
         });
-    }else if(alerta.Alerta==='recargar'){
+    } else if (alerta.Alerta === 'recargar') {
         Swal.fire({
             title: alerta.Titulo,
             text: alerta.Texto,
@@ -78,7 +74,7 @@ function alertasAjax(alerta){
                 location.reload();
             }
         });
-    }else if(alerta.Alerta==="limpiar"){
+    } else if (alerta.Alerta === "limpiar") {
         Swal.fire({
             title: alerta.Titulo,
             text: alerta.Texto,
@@ -90,11 +86,11 @@ function alertasAjax(alerta){
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.value) {
-                document.querySelector(".FormularioAjax").reset();
+                form.reset(); // Resetear el formulario actual
             }
         });
-    }else if(alerta.Alerta==="redireccion"){
-        window.location.href=alerta.URL;
+    } else if (alerta.Alerta === "redireccion") {
+        window.location.href = alerta.URL;
     }
-
 }
+
