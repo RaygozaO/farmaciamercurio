@@ -28,7 +28,7 @@ if(isset($_POST['nombreusuario']) || isset($_POST['pass'])){
 
 
 }else{
-    session_start(['name'=>'SPM']);
+    session_start(['name'=>'FMAPP']);
     session_unset();
     session_destroy();
     header("Location: ".SERVERURL."login/");

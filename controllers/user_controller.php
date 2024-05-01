@@ -13,18 +13,22 @@ class user_controller extends user_model
         $pass = main_model::clean_chains($_POST['pass']);
         $pass2 = main_model::clean_chains($_POST['pass2']);
         $id_rol = main_model::clean_chains($_POST['id_rol'] ?? 3);
+        $enabled = main_model::clean_chains($_POST['enabled'] ?? 0);
+
+        $calle = main_model::clean_chains($_POST['calle']);
+        $numero = main_model::clean_chains($_POST['numero']);
+        $colonia = main_model::clean_chains($_POST['colonias']);
+        $interior = main_model::clean_chains($_POST['interior']);
+        $codigopostal = main_model::clean_chains($_POST['codigopostal']);
+        $municipio = main_model::clean_chains($_POST['municipio']);
+        $estado = main_model::clean_chains($_POST['estado']);
+
         $nombrecliente = main_model::clean_chains($_POST['nombrecliente']);
+        $nombre2 = main_model::clean_chains($_POST['nombre2']);
         $apellidopaterno = main_model::clean_chains($_POST['apellidopaterno']);
         $apellidomaterno = main_model::clean_chains($_POST['apellidomaterno']);
         $telefono = main_model::clean_chains($_POST['telefono']);
         $email = main_model::clean_chains($_POST['email']);
-        $calle = main_model::clean_chains($_POST['calle']);
-        $numero = main_model::clean_chains($_POST['numero']);
-        $interior = main_model::clean_chains($_POST['interior']);
-        $codigopostal = main_model::clean_chains($_POST['codigopostal']);
-        $colonia = main_model::clean_chains($_POST['colonia']);
-        $municipio = main_model::clean_chains($_POST['municipio']);
-        $estado = main_model::clean_chains($_POST['estado']);
 
         if ($nombreusuario == "") {
             //var_dump($nom_usuario_reg.'line 31 CONTROLLER');
@@ -225,19 +229,21 @@ class user_controller extends user_model
             "pass" => $clave,
             "nombreusuario" => $nombreusuario,
             "id_rol" => $id_rol,
+            "enabled"=> $enabled,
+            "calle" => $calle,
+            "numero" => $numero,
+            "colonia" => $colonia,
+            "interior" => $interior,
+            "codigopostal" => $codigopostal,
+            "municipio" => $municipio,
+            "estado" => $estado,
+
             "nombrecliente" => $nombrecliente,
+            "nombre2" => $nombre2,
             "apellidopaterno" => $apellidopaterno,
             "apellidomaterno" => $apellidomaterno,
             "telefono" => $telefono,
             "email" => $email,
-            "calle" => $calle,
-            "numero" => $numero,
-            "interior" => $interior,
-            "codigopostal" => $codigopostal,
-            "colonia" => $colonia,
-            "municipio" => $municipio,
-            "estado" => $estado,
-            "id_rol" => 3
         ];
         //var_dump($nom_usuario_reg.'linea 242 controller');
         $agregar_usuario = user_model::add_user_model($datos_user_reg);
@@ -258,5 +264,6 @@ class user_controller extends user_model
         }
         echo json_encode($alerta);
     }
+
 
 }

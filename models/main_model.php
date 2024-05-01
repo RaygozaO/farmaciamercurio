@@ -3,21 +3,18 @@ global $peticionAjax;
 if($peticionAjax){
         require_once "../config/SERVER.php";
     }else{
-        require_once "../config/SERVER.php";
+        require_once "./config/SERVER.php";
     }
     class main_model{
         /*----------- funcion de conexion a BD ------------*/
         protected static function connDB(){
             try {
                 $mbd = new PDO(SGBD,USER,PASS);
-                /*$mbd->exec('SET CHARACTER SET utf8');
-                return $mbd;*/
                 $mbd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 //echo "conexion exitosa";
             }catch (PDOException $e){
                 echo "Error de conexion".$e->getMessage();
             }
-            var_dump($mbd);
             return $mbd;
         }
 
@@ -91,7 +88,7 @@ if($peticionAjax){
             return (count($value)==3 && checkdate($value[1],$value[2],$value[0]))?false :true;
         }
         /*-------------paginador--------------------- */
-        protected static function paginador_vitas($page,$num_pages,$url,$bout){
+        protected static function paginador_vistas($page,$num_pages,$url,$bout){
             $table='<nav aria-label="Page navigation example"><ul class="pagination 
             justify-content-center"';
             if($page==1){

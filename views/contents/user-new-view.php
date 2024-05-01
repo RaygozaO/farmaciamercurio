@@ -119,20 +119,20 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="form-group">
-                            <label for="nombrecolonia" class="bmd-label-floating">Colonia</label>
-                            <input type="text" pattern="[0-9a-zA-ZáéíóúÁÉÍÓÚñÑ ]{5,40}" class="form-control" name="nombrecolonia" id="nombrecolonia" maxlength="40">
+                            <label for="colonias" class="bmd-label-floating">Colonia</label>
+                            <input type="text" pattern="[0-9a-zA-ZáéíóúÁÉÍÓÚñÑ ]{5,40}" class="form-control" name="colonias" id="colonias" maxlength="40">
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="form-group">
-                            <label for="nombremunicipio" class="bmd-label-floating">Municipio</label>
-                            <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{5,40}" class="form-control" name="nombremunicipio" id="nombremunicipio" maxlength="40">
+                            <label for="municipio" class="bmd-label-floating">Municipio</label>
+                            <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{5,40}" class="form-control" name="municipio" id="municipio" maxlength="40">
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="form-group">
-                            <label for="nombreentidad" class="bmd-label-floating">Estado</label>
-                            <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{5,40}" class="form-control" name="nombreentidad" id="nombreentidad" maxlength="40">
+                            <label for="estado" class="bmd-label-floating">Estado</label>
+                            <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{5,40}" class="form-control" name="estado" id="estado" maxlength="40">
                         </div>
                     </div>
                 </div>

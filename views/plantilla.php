@@ -17,6 +17,12 @@
 		if($result=="login" || $result=="404"){
 			require_once "./views/contents/".$result."-view.php";
 		}else{
+            session_start(['name'=>'FMAPP']);
+            require_once "./controllers/login_controller.php";
+            $lc = new login_controller();
+            if (!isset( $_SESSION['token']) || !isset( $_SESSION['nombreusuario']) || !isset($_SESSION['id_rol'] )) {
+                echo $lc->sesion_controller();
+            }
 	?>
 	<!-- Main container -->
 	<main class="full-box main-container">

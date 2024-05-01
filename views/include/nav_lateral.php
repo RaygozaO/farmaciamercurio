@@ -4,9 +4,9 @@
     <div class="full-box nav-lateral-content">
         <figure class="full-box nav-lateral-avatar">
             <i class="far fa-times-circle show-nav-lateral"></i>
-            <img src="./views/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
+            <img src="../views/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
             <figcaption class="roboto-medium text-center">
-                Oscar Raygoza <br><small class="roboto-condensed-light">Web Developer</small>
+                <?php echo $_SESSION['nombre_fmapp']. " ".$_SESSION['paterno_fmapp']; ?> <br><small class="roboto-condensed-light"><?php echo $_SESSION['usuario_fmapp']; ?></small>
             </figcaption>
         </figure>
         <div class="full-box nav-lateral-bar"></div>
@@ -47,7 +47,7 @@
                             <a href="<?php echo SERVERURL; ?>product-search"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Producto</a>
                         </li>
                         <li>
-                            <a href="<?php echo SERVERURL; ?>product-update"><i class="fas fa-search fa-fw"></i> &nbsp; Modificar Producto</a>
+                            <a href="<?php echo SERVERURL; ?>product-update"><i class="fas fa-sync-alt fa-fw"></i> &nbsp; Modificar Producto</a>
                         </li>
                     </ul>
                 </li>
@@ -64,7 +64,7 @@
                             <a href="<?php echo SERVERURL; ?>reservation-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Cancelar Cita</a>
                         </li>
                         <li>
-                            <a href="<?php echo SERVERURL; ?>reservation-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Reprogramar Cita</a>
+                            <a href="<?php echo SERVERURL; ?>reservation-list"><i class="fas fa-sync-alt fa-fw"></i> &nbsp; Reprogramar Cita</a>
                         </li>
                     </ul>
                 </li>
@@ -75,10 +75,10 @@
                             <a href="<?php echo SERVERURL; ?>reservation-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nueva venta</a>
                         </li>
                         <li>
-                            <a href="<?php echo SERVERURL; ?>reservation-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Cancelar Venta</a>
+                            <a href="<?php echo SERVERURL; ?>reservation-new"><i class="fas fa- fa-fw"></i> &nbsp; Cancelar Venta</a>
                         </li>
                         <li>
-                            <a href="<?php echo SERVERURL; ?>reservation-update"><i class="fas fa-plus fa-fw"></i> &nbsp; Modificar venta</a>
+                            <a href="<?php echo SERVERURL; ?>reservation-update"><i class="fas fa-sync-alt  fa-fw"></i> &nbsp; Modificar venta</a>
                         </li>
                         <li>
                             <a href="<?php echo SERVERURL; ?>reservation-search"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar por fecha</a>
@@ -99,7 +99,7 @@
                             <a href="<?php echo SERVERURL; ?>user-search"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar usuario</a>
                         </li>
                         <li>
-                            <a href="<?php echo SERVERURL; ?>user-search"><i class="fas fa-search fa-fw"></i> &nbsp; Modificar usuario</a>
+                            <a href="<?php echo SERVERURL; ?>user-update"><i class="fas fa-sync-alt fa-fw"></i> &nbsp; Modificar usuario</a>
                         </li>
                     </ul>
                 </li>
