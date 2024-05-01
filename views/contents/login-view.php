@@ -21,7 +21,7 @@
 </div>
 <?php
     if(isset($_POST['usuario_log']) && isset($_POST['pass_log'])){
-        require_once "./controllers/login_controller.php";
+        require_once "../controllers/login_controller.php";
         $ins = new login_controller();
         echo $ins->sesion_controller();
     }

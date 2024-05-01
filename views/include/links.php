@@ -23,3 +23,4 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="../images/icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="../views/js/sweetalert2.min.js" ></script>

@@ -1,4 +1,4 @@
-    <script src="../views/js/sweetalert2.min.js" ></script>
+   <!-- <script src="../views/js/sweetalert2.min.js" ></script> -->
     <script src="../views/js/jquery-3.4.1.min.js" ></script>
     <script src="../views/js/popper.min.js" ></script>
     <script src="../views/js/bootstrap.min.js" ></script>
