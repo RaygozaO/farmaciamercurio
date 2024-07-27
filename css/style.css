@@ -27,13 +27,13 @@
 
 :root{
 	--color-one: #F5F5F5;
-	--color-two: #24292E;
-	--color-three: #EC5252;
+	--color-two: #606676; /*#24292E*/
+	--color-three: #BEC6A0; /*#EC5252*/
 	/*--color-three: #0366D6;*/
 
-	--form-color: #14111A;
+	--form-color: #5A72A0; /*#14111A*/
 
-	--accent-color: #253556;
+	--accent-color: #606676	; /*#253556*/
 	/*--accent-color: #455A64;*/
     --border-color: #D8D8D8;
 }
@@ -45,6 +45,34 @@ body,html{
 	background-color: var(--color-one);
 	color: #333;
 	font-size: 16px;
+}
+.receta-head {
+	text-align: center;
+	position: relative;
+	font-style: italic;
+	font-size: 2em;
+	padding: 20px 0;
+	color: #1c294e;
+	background-color: #FEF3E2;
+}
+.centra-head {
+	text-align: center;
+	position: relative;
+	font-size: 2em;
+	padding: 20px 0;
+	color: #1c294e;
+}
+.receta-head img{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 50px;
+}
+.receta-head img.left{
+	left: 0;
+}
+.receta-head img.right {
+	right: 0;
 }
 .container-cards {
 	max-width: 1500px;
@@ -258,7 +286,7 @@ table form{
 	left: 0;
 	z-index: 1;
 	transition: all .2s ease-in-out;
-	background-image: url('../assets/img/nav-font.jpg');
+	background-image: url('../assets/img/fondoLoto.jpg');
 	background-position: center center;
 	background-size: cover;
 }
@@ -508,4 +536,23 @@ table form{
 
 }
 
-/*----------  Keyframes  ----------*/
+/*----------  Recipe  ----------*/
+.whatsapp-button {
+	display: inline-block;
+	background-color: #FEF3E2;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+.whatsapp-button img {
+	vertical-align: middle;
+	margin-right: 8px;
+}
+.fondo-paja{
+	background-color: #FEF3E2;
+	color:  #1c294e;
+}
