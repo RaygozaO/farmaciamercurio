@@ -556,3 +556,16 @@ table form{
 	background-color: #FEF3E2;
 	color:  #1c294e;
 }
+.fondo-tabla{
+	background-color: #BEC6A0 !important;
+}
+.fondo-tabla th{
+	width: 50px;
+	padding: 10px;
+	border-bottom:solid 1px var(--color-two);
+}
+.fondo-tabla td {
+	width: 490px;
+	padding: 10px;
+	border-bottom:solid 1px var(--color-two);
+}

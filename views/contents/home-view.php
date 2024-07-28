@@ -64,7 +64,7 @@
                     </div>
                     <div class="col">
                         <div class="m-1 border bg-light">
-                            <a href="reservation-reservation" class="tile">
+                            <a href="recipe-new" class="tile">
                                 <div class="tile-tittle">Médicos</div>
                                 <div class="tile-icon">
                                     <i class="fa fa-user-md" aria-hidden="true"></i>

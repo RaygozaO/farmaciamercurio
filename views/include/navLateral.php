@@ -64,19 +64,19 @@
                     <a href="#" class="nav-btn-submenu"><i class="fa fa-user-md"></i> &nbsp; Médicos <i class="fas fa-chevron-down"></i></a>
                     <ul>
                         <li>
-                            <a href="reservation-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo préstamo</a>
+                            <a href="recipe-new"><i class="fas fa-user-md"></i> &nbsp; Dra. Mitzy </a>
                         </li>
                         <li>
-                            <a href="reservation-reservation"><i class="far fa-calendar-alt fa-fw"></i> &nbsp; Reservaciones</a>
+                            <a href="joce-new"><i class="fas fa-user-md"></i> &nbsp; Dra. Ps. Jocelyn</a>
                         </li>
                         <li>
-                            <a href="reservation-pending"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Préstamos</a>
+                            <a href="lucio-new"><i class="fas fa-user-injured"></i> &nbsp; Ft. Lucio</a>
                         </li>
                         <li>
-                            <a href="reservation-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Finalizados</a>
+                            <a href="hamel-new"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp; Psic. Hamel</a>
                         </li>
                         <li>
-                            <a href="reservation-search"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar por fecha</a>
+                            <a href="labs-new"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Estudios Clinicos</a>
                         </li>
                     </ul>
                 </li>
@@ -127,7 +127,7 @@
                     <a href="#" class="nav-btn-submenu"><i class="fa fa-handshake"></i> &nbsp; Enlace Médico <i class="fas fa-chevron-down"></i></a>
                     <ul>
                         <li>
-                            <a href="user-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
+                            <a href="enlace-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Enlace Referenciado</a>
                         </li>
                         <li>
                             <a href="user-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de usuarios</a>
