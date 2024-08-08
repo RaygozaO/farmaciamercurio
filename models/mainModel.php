@@ -40,12 +40,14 @@ class mainModel{
         $output=base64_encode($output);
         return $output;
     }
+
     protected static function decryption($string){
         $key=hash('sha256', SECRET_KEY);
         $iv=substr(hash('sha256', SECRET_IV), 0, 16);
         $output=openssl_decrypt(base64_decode($string), METHOD, $key, 0, $iv);
         return $output;
     }
+
     /*----------Generar codigos aleatorios-------------*/
     protected static function generar_codigos($letra,$longitud,$numero){
         for($i=1; $i<=$longitud; $i++){

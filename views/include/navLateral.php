@@ -157,13 +157,13 @@
                     <a href="#" class="nav-btn-submenu"><i class="fa fa-chart-pie"></i> &nbsp; Informes <i class="fas fa-chevron-down"></i></a>
                     <ul>
                         <li>
-                            <a href="user-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
+                            <a href="admin"><i class="fas fa-plus fa-fw"></i> &nbsp; Ver Informes</a>
                         </li>
                         <li>
-                            <a href="user-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de usuarios</a>
+                            <a href="admin-new"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Imprimir Informes</a>
                         </li>
                         <li>
-                            <a href="user-search"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar usuario</a>
+                            <a href="admin-search"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Informe</a>
                         </li>
                     </ul>
                 </li>
@@ -191,13 +191,13 @@
                     <a href="#" class="nav-btn-submenu"><i class="far fa-calendar-alt fa-fw"></i> &nbsp; Citas Médicas <i class="fas fa-chevron-down"></i></a>
                     <ul>
                         <li>
-                            <a href="user-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
+                            <a href="date-new"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo cita</a>
                         </li>
                         <li>
-                            <a href="user-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de usuarios</a>
+                            <a href="date-list"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de citas</a>
                         </li>
                         <li>
-                            <a href="user-search"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar usuario</a>
+                            <a href="date-search"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar cita</a>
                         </li>
                     </ul>
                 </li>

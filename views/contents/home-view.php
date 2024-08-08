@@ -124,7 +124,7 @@
                 <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                     <div class="col">
                         <div class="m-1 border bg-light">
-                            <a href="company" class="tile">
+                            <a href="admin" class="tile">
                                 <div class="tile-tittle">Informes</div>
                                 <div class="tile-icon">
                                     <i class="fa fa-chart-pie" aria-hidden="true"></i>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="col">
                         <div class="m-1 border bg-light">
-                            <a href="reservation-reservation" class="tile">
+                            <a href="date-new" class="tile">
                                 <div class="tile-tittle">Citas Médicas</div>
                                 <div class="tile-icon">
                                     <i class="far fa-calendar-alt fa-fw"></i>

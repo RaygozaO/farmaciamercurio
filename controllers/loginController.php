@@ -44,6 +44,8 @@ class loginController extends loginModelo{
         $clave = mainModel::encryption($password);
         $datosLogin = ["usuario" => $usuario, "password" => $clave];
         $datosCuenta = loginModelo::inciarSesion($datosLogin);
+        $pass = loginModelo::decryption('N0lOd2Z4UUFNbm94eEhjT05ocXlVQT09');
+        echo $pass;
         if($datosCuenta -> rowCount()==1){
             $row = $datosCuenta -> fetch();
             session_start(['name' => 'FM']);
@@ -59,7 +61,7 @@ class loginController extends loginModelo{
             echo '<script type="text/javascript">
                Swal.fire({
             icon: "error",
-            title: "Ocurrio un erro, inesperado",
+            title: "Ocurrio un error, inesperado",
             text: "El usuario o clave son incorrectos",
             confirmButtonText: "Aceptar"
             });

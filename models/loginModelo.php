@@ -6,11 +6,13 @@
         protected static function inciarSesion($data) {
             try {
                 $conn = mainModel::conectar();
-                $sql = $conn->prepare("SELECT us.pass, us.nombreusuario, us.id_rol, cli.nombrecliente, cli.apellidopaterno 
+                $sql = $conn->prepare("SELECT us.pass, us.nombreusuario, us.id_rol, cli.nombrecliente, cli.apellidopaterno,
+                                us.enabled = 1
                                FROM usuarios us 
                                JOIN mercurio.cliente cli ON us.idusuario = cli.id_usuario 
-                               WHERE us.nombreusuario = :Usuario;");
+                               WHERE us.nombreusuario = :Usuario AND us.pass = :Password");
                 $sql->bindParam(":Usuario", $data['usuario']);
+                $sql->bindParam(":Password", $data['password']);
                 $sql->execute();
                 return $sql;
             } catch (PDOException $e) {
